@@ -1,9 +1,9 @@
 import React from 'react'
-import { CalculatorPage } from './Components/CalculatorPage'
+import AllRoutes from './CalculatorRoutes/AllRoutes'
 function App() {
   return (
     <>
-    <CalculatorPage/>
+    <AllRoutes/>
     </>
   )
 }
