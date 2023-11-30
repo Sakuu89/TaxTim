@@ -13,7 +13,7 @@ import Logbook from '../Pages/Logbook'
 const AllRoutes = () => {
   return (
    <Routes>
-    
+
 <Route path='/' element={<HomePage />}></Route>
 <Route path='/about' element={<About />}></Route>
 <Route path='/blog' element={<Blog />}></Route>
@@ -29,4 +29,4 @@ const AllRoutes = () => {
   )
 }
 
-export default AllRoutes
+export default AllRoutes;
