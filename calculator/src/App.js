@@ -1,12 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react'
+import { CalculatorPage } from './Components/CalculatorPage'
 function App() {
   return (
-    <div className="App">
-      <h1>Calculator</h1>
-    </div>
-  );
+    <>
+    <CalculatorPage/>
+    </>
+  )
 }
 
-export default App;
+export default App
