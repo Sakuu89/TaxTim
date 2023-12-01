@@ -7,7 +7,7 @@ const Navbar = () => {
     const links = [
         {title:"Calculator", path:'/calculator'},
         {title:"Company", path:'/company'},
-        {title:"Conatct", path:'/contact'},
+        {title:"Contact", path:'/contact'},
         {title:"FAQ", path:'/faq'},
         {title:"LogBook", path:'/logbook'},
         {title:"Login", path:'/login'},
