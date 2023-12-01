@@ -11,6 +11,9 @@ import Paynow from '../Pages/Paynow'
 import Students from '../Pages/Students'
 import Logbook from '../Pages/Logbook'
 import Contact from '../Pages/Contact'
+import IncomeTax from '../Pages/IncomeTax'
+import WearTear from '../Pages/WearTear'
+import LeasePremium from '../Pages/LeasePremium'
 const AllRoutes = () => {
   return (
    <Routes>
@@ -26,7 +29,9 @@ const AllRoutes = () => {
 <Route path='/login' element={<Login />}></Route>
 <Route path='/paynow' element={<Paynow />}></Route>
 <Route path='/students' element={<Students />}></Route>
-
+<Route path='/incomeTax' element={<IncomeTax/>}></Route>
+<Route path='/wear-tear' element={<WearTear/>}></Route>
+<Route path='/lease-premium' element={<LeasePremium />}></Route>
    </Routes>
   )
 }
