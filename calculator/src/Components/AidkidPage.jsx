@@ -147,8 +147,6 @@ const AidkidPage = () => {
         <h3>Qualifying medical expenditure (section 6B): R{qualifyingMedicalExpenses.toFixed(2)}</h3>
       </div>
       </div>
-
-      
     </div>
   );
 };
