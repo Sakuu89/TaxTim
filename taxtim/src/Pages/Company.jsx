@@ -15,7 +15,7 @@ import { Button } from '@chakra-ui/react'
  const Company = () => {
     const navigate = useNavigate()
     return (
-        // <DIV>
+      
             <div className={styles.main}>
                 <div className={styles.head}>
                     <h1>Tax Calculators</h1>
@@ -75,7 +75,7 @@ import { Button } from '@chakra-ui/react'
                             <img src="https://media.taxtim.com/images/taxtim-logo.svg" alt="error" width={"200px"} height={"200px"} style={{ display: "block", margin: "auto" }} />
                             <h3>-Easy Tax Filling-</h3>
                             <h1>Switch to TaxTim and <br /> WIN R10,000</h1>
-                            <Button colorScheme='facebook' margin={"20px 180px"} onClick={()=>navigate('/login')}>
+                            <Button colorScheme='facebook' margin={"20px 180px"} onClick={()=>navigate('/about')}>
                                Get Started
                             </Button>
 
@@ -86,7 +86,7 @@ import { Button } from '@chakra-ui/react'
 
                 </div>
             </div>
-        // {/* </DIV> */}
+
     )
 }
 

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import styles from './IncomTax.module.css'
 import { Button } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 
 function IncomeTax() {
   const [salary, setSalary] = useState(0)
   const [value,setValue]=useState(0)
   const [tax,setTax]=useState(0)
-
+  const navigate = useNavigate();
   const income = () => {
     let val = salary;
     let tax = 0;
@@ -131,8 +132,9 @@ function IncomeTax() {
                   borderColor='green.500'
                   backgroundColor={"#404240"}
                   color={"white"}
+                  onClick={()=>navigate('/login')}
                 >
-                  GET OUR APP
+                  GET STARTED
                 </Button>
               </div>
 

@@ -1,0 +1,36 @@
+
+#blogDiv
+   {
+        padding-top:50px;
+        margin:auto;
+        /* padding-left: 20px; */
+        width:90%;
+        text-align:left;}
+
+        #head{
+            font-size:27px;
+        }
+        #maindiv{
+            display:flex;
+            flex-direction:row;
+        }
+        .para{
+            width:80%;
+            /* border: 1px solid black; */
+            text-align:justify;
+            padding:0px 20px;
+            margin-left: 55px;
+            
+        }
+        @media screen and (max-width: 920px){
+            #maindiv{
+            display:flex;
+            flex-direction:column;
+        }
+        .para{
+            width:90%;
+            text-align:justify;
+            
+        }
+        }  
+    

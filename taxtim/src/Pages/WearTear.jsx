@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styles from './WearTear.module.css'
 import { Button } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 // import image from "../Images/homefront_cleanup.png"
 
 function WearTear() {
@@ -8,36 +9,7 @@ function WearTear() {
   const [value,setValue]=useState()
   const [year,setYear]=useState()
   const [secondyear,setSecondYear]=useState()
-  // console.log("do",secondyear)
-
-//   const handleClick=()=>{
-//     setIsAuth(true)
-   
-//       if(year==2013){
-//         setSecondYear(2014)
-//       }else if(year==2014){
-//         setSecondYear(2015)
-//       }else if(year==2015){
-//         setSecondYear(2016)
-//       }else if(year==2016){
-//         setSecondYear(2017)
-//       }else if(year==2017){
-//         setSecondYear(2018)
-//       }else if(year==2018){
-//         setSecondYear(2019)
-//       }else if(year==2019){
-//         setSecondYear(2020)
-//       }else if(year==2020){
-//         setSecondYear(2021)
-//       }else if(year==2021){
-//         setSecondYear(2022)
-//       }else if(year==2022){
-//         setSecondYear(2023)
-//       }else if(year==2023){
-//         setSecondYear(2024)
-//       }
-       
-//   }
+  const navigate = useNavigate();
 const handleClick = () => {
     setIsAuth(true);
   
@@ -203,8 +175,9 @@ const handleClick = () => {
                   borderColor='green.500'
                   backgroundColor={"#404240"}
                   color={"white"}
+                  onClick={()=> navigate('/login')}
                 >
-                  GET OUR APP
+                  GET STARTED
                 </Button>
               </div>
 

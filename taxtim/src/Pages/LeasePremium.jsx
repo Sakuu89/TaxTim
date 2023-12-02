@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styles from './LeasePremium.module.css'
 import { Button } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 // import image from "../Images/homefront_cleanup.png"
 
 function LeasePremium() {
@@ -10,7 +11,8 @@ function LeasePremium() {
   const [value,setValue]=useState(0)
   const [lease,setLease]=useState(0)
   const [lee,setLee]=useState(0)
-  const [data,setData]=useState("")
+  const [data,setData]=useState("");
+  const navigate = useNavigate();
   let val=0
   console.log(startYear)
   console.log(endYear)
@@ -262,8 +264,9 @@ function LeasePremium() {
                   borderColor='green.500'
                   backgroundColor={"#404240"}
                   color={"white"}
+                  onClick={()=>navigate('/login')}
                 >
-                  GET OUR APP
+                  GET STARTED
                 </Button>
               </div>
 
