@@ -14,7 +14,8 @@ import Contact from '../Pages/Contact'
 import IncomeTax from '../Pages/IncomeTax'
 import WearTear from '../Pages/WearTear'
 import LeasePremium from '../Pages/LeasePremium'
-const AllRoutes = () => {
+import PrivateRoute from './privateRoute'
+const AllRoutes = ({ isAuthenticated }) => {
   return (
    <Routes>
 
@@ -28,6 +29,16 @@ const AllRoutes = () => {
 <Route path='/logbook' element={<Logbook />}></Route>
 <Route path='/login' element={<Login />}></Route>
 <Route path='/paynow' element={<Paynow />}></Route>
+{/* <Route
+        path="/paynow"
+        element={<PrivateRoute><Paynow /></PrivateRoute>}
+        isAuthenticated={isAuthenticated}
+      /> */}
+       {/* <PrivateRoute
+        path="/paynow"
+        element={<Paynow />}
+        isAuthenticated={isAuthenticated}
+      /> */}
 <Route path='/students' element={<Students />}></Route>
 <Route path='/incomeTax' element={<IncomeTax/>}></Route>
 <Route path='/wear-tear' element={<WearTear/>}></Route>

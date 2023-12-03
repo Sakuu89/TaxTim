@@ -111,6 +111,7 @@
    .right{
     width:40%;
     height:5%;
+    display: flex;
     /* border: 1px solid black; */
     padding:0px 20px;
     margin:20px 0px;

@@ -17,6 +17,7 @@ import { Button } from '@chakra-ui/react'
     return (
       
             <div className={styles.main}>
+           
                 <div className={styles.head}>
                     <h1>Tax Calculators</h1>
                     <h2>Calculate everything you need to know about your tax and how tax affects you</h2>

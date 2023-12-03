@@ -1,9 +1,52 @@
 {
-  "topics": [
+  "login": [
     {
-      "id": 1,
-      "title": "Know More"
-     
+      "email": "singhsakshi.com",
+      "password": "123456",
+      "username": "Sakshi",
+      "id": 1
+    }
+  ],
+  "userdetails": [
+    {
+      "firstname": "Sakshi",
+      "lastname": "Singh",
+      "email": "singhsakshia488@gmail.com",
+      "address": "Raptinagar Haridwar puram",
+      "number": "08934005727",
+      "id": 1
+    },
+    {
+      "firstname": "Sakshi",
+      "lastname": "Singh",
+      "email": "singhs488@gmail.com",
+      "address": "Raptinagar Haridwar puram",
+      "number": "0893",
+      "id": 2
+    },
+    {
+      "firstname": "Sakshi",
+      "lastname": "Singh",
+      "email": "singhsakshia488@gmail.com",
+      "address": "Raptinagar Haridwar puram",
+      "number": "08934005727",
+      "id": 3
+    },
+    {
+      "firstname": "Sakshi",
+      "lastname": "Singh",
+      "email": "singhsakshia488@gmail.com",
+      "address": "Raptinagar Haridwar puram",
+      "number": "08934005727",
+      "id": 4
+    },
+    {
+      "firstname": "Sakshi",
+      "lastname": "Singh",
+      "email": "singhsakshia488@gmail.com",
+      "address": "Raptinagar Haridwar puram",
+      "number": "08934005727",
+      "id": 5
     }
   ]
 }
