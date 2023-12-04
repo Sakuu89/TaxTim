@@ -15,6 +15,7 @@
     "react-scripts": "5.0.1",
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
+    "styled-components": "^6.1.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -22,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server":"json-server db.json --port 8080 --watch"
+    "server": "json-server db.json --port 8080 --watch"
   },
   "eslintConfig": {
     "extends": [
