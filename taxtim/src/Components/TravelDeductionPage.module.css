@@ -1,0 +1,103 @@
+.travelpage{
+    width: 100%;
+    padding-top: 90px;
+}
+.travelpage h1{
+    font-size: 26px;
+    font-weight: 600;
+    color: #4d4d4d;
+    background-color: #ffffff;
+    text-align: left;
+    padding-left: 65px;
+}
+.travelpage h2{
+    font-size: 24px;
+    font-weight: 600;
+    color: #4d4d4d;
+    background-color: #ffffff;
+    text-align: left;
+    padding-left: 65px;
+}
+.left_heading{
+    width: 100%;
+    margin-left: 65px;
+    margin-top: 13px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #555555;
+}
+.left_heading p{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 20px;
+    color: white;
+}
+.left_mid{
+    width: 100%;
+    margin-left: 65px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: #ececec;
+    text-align: left;
+}
+.left_mid label{
+    padding: 20px;
+}
+.input_gap{
+    margin-top: 20px;
+    
+}
+button{
+    width: 160px;
+    height: 32px;
+    font-weight: 400;
+    color: white;
+    background-color: #eb4f36;
+    border-radius: 2px;
+}
+.results{
+    margin-top: 50px;
+    text-align: left;
+    padding-left: 65px;
+    color: #4d4d4d;
+    background-color: #ffffff;
+}
+.right{
+    width: 100%;
+    
+    /* border: 1px solid black; */
+    padding-top: 20px;
+}
+.right_flex{
+    display: flex;
+}
+.bot{
+    width: 210px;
+    height: 180px;
+}
+.t1{
+    display: flex;
+    padding-top: 32px;
+}
+.t2 p{
+
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    padding: 0 20px 0 20px;
+    color: #4d4d4d;
+    background-color: #ffffff;
+}
+.t2 img{
+    width: 20px;
+    
+}
+.t2 span{
+    display: inline;
+    
+}
+ select{
+    margin-left: 20px;
+}

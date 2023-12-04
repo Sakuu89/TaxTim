@@ -1,0 +1,98 @@
+#main-container{
+    width:80%;
+    margin:auto;
+    margin-top:30px;
+ }
+ #heading{
+     width:80%;
+     font-size:12px;
+     text-align: left;
+     font-weight:bold;
+   
+ }
+ 
+ #img-chatBot{
+     display:flex;
+     margin-top:30px;
+     margin-left: -20px;
+   
+ }
+ #chatbot{
+     width:30%;
+     z-index:-1;
+ }
+ #banner{
+    width: 100px;
+    height: 50px;
+   display:flex;
+   gap:70px;
+   margin-Top:30px;
+ }
+ #banner img{
+    width: 150px;
+ }
+ .title{
+    font-size:20px;
+     font-weight :400;
+ }
+ @media only screen and (min-width: 576px) and (max-width: 1240px) {
+     #main-container{
+         width:65%;
+         margin:auto;
+         margin-top:30px;
+    
+      }
+      #heading{
+          width:70%;
+          font-size:18px;
+          font-weight:bold;
+         
+      }
+    
+      
+      #img-chatBot{
+          display:flex;
+          margin-top:30px;
+      
+      }
+     
+      #img{
+        
+         width:200px;
+      }
+      #chatbot{
+     
+         margin-left:-100px;
+         width:300px
+      }
+ 
+      #banner img{
+        width: 50px;
+     }
+ 
+ }
+ @media screen and (max-width:769px){
+    #img-chatBot{
+        display:flex;
+        margin-top:30px;
+        width: 40%;
+        height: 50%;
+    
+    }
+    #chatbot{
+        font-size: 30px;
+        margin-left:5px;
+        width:10%;
+        height: 100px;
+     }
+    #banner img{
+        width: 50px;
+        margin-left: -2.5rem;
+     }
+     .title{
+        margin-top: 90px;
+        width: 200%;
+        margin-left: -5rem;
+
+     }
+ }

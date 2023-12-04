@@ -1,0 +1,79 @@
+
+#flexdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+     width: 90%;
+      margin: auto;
+     box-shadow:  rgba(0, 0, 0.7, 0.35) 0px 5px 15px;
+      padding: 40px 15px;
+       gap: 35px;
+       border-radius: 20px 20px;
+}
+.formdiv{
+    width: 50%;
+     border:1px solid white;
+     border-radius:10px;
+    padding-top:20px;
+}
+.head{
+    background-color:#DAEFF4;
+    font-size:30px;
+    padding:8px 5px;
+    border-radius: 7px;
+}
+/* #paybutton{
+    display:flex;
+    margin:auto;
+    background-color:#DAEFF4;
+    color:black;
+    padding:5px 20px;
+    border-radius:10px;
+} */
+#divpay{
+    width:100%;
+    margin-top:20px;
+    font-size:25px;
+}
+#divpay:hover{
+    
+    transform:scale(1.1)
+}
+
+.inputbox{
+    background-color:#DAEFF4;
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 7px;
+}
+    @media screen and (max-width: 900px){
+        #flexdiv{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+     width: 90%;
+      margin: auto;
+     box-shadow:  rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      padding: 40px 15px;
+       gap: 35px;
+}
+.formdiv{
+    width: 95%;
+    margin:auto;
+     border:1px solid white;
+     border-radius:10px;
+    padding-top:20px;
+}
+.head{
+    background-color:#DAEFF4;
+    font-size:20px;
+    padding:3px 5px
+}
+#divpay{
+    width:100%;
+    margin-top:15px;
+    font-size:14px;
+}
+
+    } 

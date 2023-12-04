@@ -5,9 +5,11 @@ import bot from '../Images/Bot.png'
 import "../Styles/HomePage.css";
 import arrow from "../Images/icons8-sort-right-30.png"
 import styled from "styled-components";
-
+import { useToast, ChakraProvider } from "@chakra-ui/react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const HomePage = () => {
+  const navigate = useNavigate("");
   const [onvideo, setonvideo] = useState(false)
   const [formData, setFormData] = useState({
     input1: "",
@@ -15,6 +17,16 @@ const HomePage = () => {
     input3: "",
     input4: "",
   });
+  const toast = useToast();
+  const showToastErr = (message, status = "error") => {
+    toast({
+      title: message,
+      status: status,
+      duration: 5000,
+      isClosable: true,
+    });
+  };
+ 
 
   const handleInputChange = (e) => {
     setFormData({
@@ -23,12 +35,23 @@ const HomePage = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Check if any field in the form is empty
+    const isEmptyField = Object.values(formData).some(value => value === '');
+
+    if (isEmptyField) {
+      showToastErr('Please fill in all the fields before submitting.');
+    } else {
+      // Redirect to another page or perform desired action if the form is filled
+      // For example, you can use window.location.href to redirect
+      navigate("/login")
+    }
   };
   return (
     <>
+     <ChakraProvider>
     <DIV onvideo={onvideo}>
       <div className="container gradient-background ">
         <div className="img-container">
@@ -103,7 +126,7 @@ const HomePage = () => {
               <option value="option2">Option 2</option>
               <option value="option3">Option 3</option>
             </select>
-            <button type="submit">Start My Tax Return</button>
+            <button  type="submit">Start My Tax Return</button>
           </form>
           <p className="ptag">
             By submitting this form I agree to TaxTim's Terms.
@@ -300,6 +323,7 @@ const HomePage = () => {
         </div>
       </div>
       </DIV>
+      </ChakraProvider>
     </>
   );
 };
@@ -312,10 +336,14 @@ const DIV = styled.div`
   display:${({ onvideo }) => onvideo ? 'none' : 'flex'};
   font-size:18px;
   background-color:white;
-  padding:10px 10px 5px 100px;
+  padding:10px 10px 5px 80px;
   border-radius:5px;
+  width:160%;
+  height:20%;
+  color:black;
   top:120px;
   right:20%;
+  cursor:pointer;
 }
 
 
@@ -325,7 +353,7 @@ const DIV = styled.div`
 #firstimg{
   position:absolute;
   width:80px;
-  top:-61%;
+  top:-32%;
   left:1%;
 }
 `

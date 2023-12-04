@@ -39,7 +39,10 @@
     text-decoration: none;
     font-size: 1em;
   }
-  
+  .loginname{
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
   .top-nav-II {
     display: flex;
     justify-content: space-around;
@@ -75,10 +78,10 @@
   }
   
   .getstart {
-    margin-left: 10px;
+
     width: 100px;
     height: 40px;
-    margin-top: -25px;
+    margin-top: -20rem;
     color: white;
     font-weight: 600;
     font-size: 15px;
@@ -175,17 +178,19 @@
       }
       .logo-img img { /* Remove the right margin */
         width: 100px;
-        height: auto;
-        margin-left: -35px;
+        height: 40px;
+        margin-left: -15px;
       }
-      .top-nav-III a{
+      .anch{
         font-size: 13px;
         font-weight: 300;
-        width: 100%;
-        height: 50%;
+        width: 110%;
+        height: 30%;
+        cursor: pointer;
       }
       .getstart{
         margin-top: 0;
+        cursor: pointer;
       }
 
     #link-div {
@@ -205,6 +210,10 @@
       }
       #link-div.active { 
         right: 0px;
+      }
+      .loginname{
+        font-size: 8px;
+        margin-right: -4rem;
       }
        #some {
         margin-top: 10px;

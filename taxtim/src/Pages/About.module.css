@@ -1,0 +1,129 @@
+#maincontainer{
+    margin-top: 0px;
+    padding-top:2%;
+    
+  }
+  #maincontainerdiv{
+   
+     width: 90%;
+      margin: auto;
+    text-align: left;
+  }
+  #firsthead{
+    font-size:30px;
+  }
+  #secondhead{
+    font-size:25px;
+  }
+  .imgwidth{
+    width:200px;
+    margin-right:100px;
+    margin-left: 20px;
+    margin-top: 5rem;
+  }
+  .lite{
+    font-size:20.48px;
+  }
+  #yellowhead{
+    padding: 18px 15px;
+    background-color: #FCFFA7
+  }
+  #tabletd img{
+    width:20px
+  }
+  #firstgrid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+     gap: 40px;
+  }
+  #midgrid{
+    display: grid;
+   grid-template-columns:repeat(3,1fr);
+    gap: 40px;
+    background-color: #E1BB23;
+    padding:20px 30px;
+  }
+  #gridsecond{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+     gap: 40px;
+     padding:30px 30px;
+  }
+  @media screen and (min-width: 601px) and (max-width: 1157px){
+    #firstgrid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+     gap: 40px;
+  }
+  #midgrid{
+    display: grid;
+   grid-template-columns:repeat(3,1fr);
+    gap: 40px;
+    background-color: #E1BB23;
+    padding:20px 30px;
+  }
+  #gridsecond{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+     gap: 40px;
+     padding:30px 30px;
+  }
+  }
+  @media screen and (min-width: 470px) and (max-width: 601px){
+    #firsthead{
+    font-size:25px;
+  }
+  #secondhead{
+    font-size:20px;
+  }
+    #firstgrid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+     gap: 40px;
+  }
+  #midgrid{
+    display: grid;
+   grid-template-columns:repeat(1,1fr);
+    gap: 40px;
+    background-color: #E1BB23;
+    padding:20px 30px;
+  }
+  #gridsecond{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+     gap: 40px;
+     padding:30px 30px;
+  }
+  }
+  @media screen and (max-width: 470px){
+    #firsthead{
+    font-size:25px;
+  }
+  #secondhead{
+    font-size:20px;
+  }
+    #firstgrid{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+     gap: 40px;
+  }
+  #midgrid{
+    display: grid;
+   grid-template-columns:repeat(1,1fr);
+    gap: 40px;
+    background-color: #E1BB23;
+    padding:20px 30px;
+  }
+  #gridsecond{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin:auto;
+     gap: 40px;
+     padding:30px 30px;
+  }
+  #gridsecond img{
+    margin:auto;
+  }
+  }
+  
+  

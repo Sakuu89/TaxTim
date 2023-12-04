@@ -174,13 +174,13 @@ form {
   }
   .form-container {
     position: absolute;
-    top: 150px;
+    top: 180px;
     right: 100px;
     text-align: left;
     gap: 10px;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 15px;
-    height: 450px;
+    height: 480px;
     border-radius: 10px;
   }
   
@@ -202,7 +202,7 @@ form {
     padding: 5px 1px;
     border: none;
     border-radius: 5px;
-    background-color: #2aa12e;
+    background-color:#eb4f36;
     color: #fff;
     cursor: pointer;
     width: 310px;
@@ -211,7 +211,7 @@ form {
   }
   
   .form-container button:hover {
-    background-color: #0069d9;
+    background-color: #444444;
   }
   
   form {
@@ -228,7 +228,7 @@ form {
   
   .h3tag {
     font-family: "Montserrat", sans-serif;
-    margin-top: 90px;
+    margin-top: 9px;
     font-weight: bolder;
   }
   /* #fastest{
@@ -360,7 +360,7 @@ form {
       position: static;
       margin-top: 20px;
       right: auto;
-      width: 100%;
+      /* width: 100%; */
     }
   
     .form-container button {
@@ -436,5 +436,13 @@ form {
     }
     .img-container2 {
       margin-left: 10px;
+    }
+  }
+  @media screen and (max-width:769px){
+    .h3tag{
+      margin-top: 13rem;
+    }
+    #videobutton{
+     margin-left: 6.5rem;
     }
   }

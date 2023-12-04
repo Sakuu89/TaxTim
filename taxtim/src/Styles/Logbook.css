@@ -1,0 +1,161 @@
+*{
+    font-family: sans-serif;
+    letter-spacing: .5px;
+}
+/* Top  */
+.Top{
+    background-image: url(../Images/Logbooktop.png);
+    height:300px;
+    opacity: 150;
+}
+.Top>img{
+    margin-top: 70px;
+    height: 70px;
+}
+.Top>h1,h4{
+    font-weight: 520;
+    margin: 10px;
+    color: white;
+}
+.Top>button{
+    font-size: 16px;
+    background-color: #EB4F36;
+    color: white;
+    height: 40px;
+    width: 150px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.Top>button:hover{
+    cursor:pointer;
+    background-color:#f18473;
+}
+/* top responsiveness */
+
+/* top ends */
+
+/* ----------------------------------------------------- */
+
+/* mid */
+.midtitle{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+.midtitle>h1{
+    font-weight:500;
+    font-size: 27px;
+    padding: 5px;
+    margin:  30px 0;
+}
+.mid>hr{
+    margin: 0 auto;
+    width: 75%;
+}
+.h11{
+    color: grey;
+    /* font-size: 32px; */
+}
+.h11:hover{
+    color: rgb(193, 186, 186);
+    cursor:pointer;
+}
+.logbook-img{
+    height:600px;
+}
+.midcontent{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+.midcontent>div{
+    margin: 10px;
+    text-align: start;
+}
+.midcontent-content>h2{
+    font-weight: 545;
+}
+.midcontent-content>h2+hr{
+    text-align: left;
+    width: 73%;
+    margin-left: 0;
+}
+.midcontent-content-p1{
+    font-size: 20px;
+    line-height: 1.5;
+    width: 75%;
+    margin-bottom: 10px;
+}
+.h33{
+    margin: 2px;
+    color: #008002;
+    margin-left: 40px;
+}
+.midcontent-list{
+    margin-left: 35px;
+    margin-top: 13px;
+}
+.midcontent-list>div{
+    display: flex;
+    padding: 5px;
+    margin: 5px 0;
+}
+.midcontent-list>div>img{
+    padding-right: 10px;
+    width: 25px;
+    height: 25px;
+}
+.midcontent-list>div>p{
+    margin: 0;
+    padding: 2px;
+}
+.midcontent-content>p{
+    font-size: 18px;
+    letter-spacing: .5px;
+    line-height: 1.4;
+    width: 78%;
+}
+.midcontent-content>h3{
+    color:grey;
+}
+.mid-buttons{
+    /* width: 78%; */
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+}
+.mid-buttons>img{
+    padding-left: 10px;
+    padding-bottom: 5px;
+    height: 40px;
+    /* width: 150px; */
+}
+.mid-buttons>button{
+    font-size: 16px;
+    background-color: #EB4F36;
+    color: white;
+    height: 40px;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.mid-buttons>button:hover{
+    cursor:pointer;
+    background-color:#f18473;
+}
+/* mid responsiveness */
+@media only screen and (max-width: 1093px) {
+    .midtitle>h1{
+        margin:  3px 0;
+    }
+  }
+  @media only screen and (max-width: 863px) {
+    .logbook-img{
+        display: none;
+    }
+    .mid{
+        text-align: center;
+    }
+  }
+/* mid ends */

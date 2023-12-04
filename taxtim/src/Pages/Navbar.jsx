@@ -1,23 +1,26 @@
-import React, { Component } from "react";
-
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "../Styles/Navbar.css";
-class Navbar extends Component  {
+import {auth} from "../Firebase";
 
-    state={clicked: false};
+const Navbar = ({logout,userName}) => {
+ const navigate = useNavigate();
+  const [clicked, setClicked] = useState(false);
+  
+
+  const handleclick = () => {
+    setClicked(!clicked);
+  };
+
+  const handleLoginClick = () => {
+    // Redirect to the login page when the button is clicked
+    // You can also use a Link component directly here
+    // <Link to="/login"></Link>
+    navigate('/login');
     
-    handleclick = () => {
-        this.setState({clicked: !this.state.clicked});
-    }
-    // const handleLoginClick = () => {
-    //     // Redirect to the login page when the button is clicked
-    //     // You can also use a Link component directly here
-    //     // <Link to="/login"></Link>
-    //     window.location.href = '/login';
-    //   };
-    render(){
+  };
+
   return (
-    
     <>
       <div className="top-nav">
         <div className="reg-nav">
@@ -25,66 +28,78 @@ class Navbar extends Component  {
             <p>Registered for SARS eFiling? Click here to get started.</p>
           </div>
         </div>
-        <div id="link-div" className={this.state.clicked ? "#link-div active" : "#link-div"}
+        <div
+          id="link-div"
+          className={clicked ? "link-div active" : "link-div"}
         >
-          <div id="some">
-            <Link className="link" to="/">
+          <div className="some">
+            <Link className="link" to="/comapany">
               Company
             </Link>
           </div>
-          <div id="some">
-            <Link className="link" to="/contact">
+          <div className="some">
+            <Link className="link" to="/logbook">
               Logbook
             </Link>
           </div>
-          <div id="some">
+          <div className="some">
             <Link className="link" to="/faq">
               FAQ
             </Link>
           </div>
-          <div id="some">
-            <Link className="link" to="/calculators">
+          <div className="some">
+            <Link className="link" to="/calculator">
               Calculators
             </Link>
           </div>
-          <div id="some">
-            <Link className="link" to="/login">
+          <div className="some">
+            <Link className="link" to="/paynow">
               Paynow
             </Link>
           </div>
         </div>
-        <div id= "mobile" onClick={this.handleclick}>
-            <i id="bar"
-            className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}
-            >
-            </i>
+        <div id="mobile" onClick={handleclick}>
+          <i
+            id="bar"
+            className={clicked ? "fas fa-times" : "fas fa-bars"}
+          ></i>
         </div>
-        
       </div>
       <div className="top-nav-II">
         <div className="logo-img">
           <Link to="/">
-            <img src="https://www.taxtim.com/za/images/taxtim-logo.svg" alt="" />
+            <img
+              src="https://www.taxtim.com/za/images/taxtim-logo.svg"
+              alt=""
+            />
           </Link>
         </div>
         <div className="top-nav-III">
           <div>
-            <a href="/howitworks" className="anch">How it works</a>
+          <Link to="/howitworks" className="anch">
+              How it works
+            </Link>
           </div>
           <div>
-            <a href="/" className="anch">Blog</a>
+          <Link to="/blog" className="anch">
+              Blog
+            </Link>
           </div>
           <div>
-            <a href="/" className="anch">About</a>
+          <Link to="/about" className="anch">
+              About
+            </Link>
           </div>
+          <h2 className="loginname" style={{fontFamily:"",fontSize:"14px",fontWeight:"900", marginLeft:"4.5rem"}}>{userName ? `Hello,${userName}` : ""}  </h2>
           <div>
-            <button  className="getstart">LOGIN</button>
+            <button  onClick={handleLoginClick} className="getstart">
+            {logout?"LOGIN":"LOGOUT"}
+            </button>
           </div>
         </div>
       </div>
     </>
   );
-};
 };
 
 export default Navbar;
