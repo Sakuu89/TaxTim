@@ -1,7 +1,9 @@
 
 #flexdiv{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
      width: 90%;
       margin: auto;
      box-shadow:  rgba(0, 0, 0.7, 0.35) 0px 5px 15px;
@@ -75,3 +77,4 @@
 }
 
     } 
+

@@ -1,15 +1,15 @@
 
 import { useState } from "react"
 import { useDispatch } from "react-redux"
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import StripeCheckout from 'react-stripe-checkout';
 
 import {
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
-  Button
+    Alert,
+    AlertIcon,
+    AlertTitle,
+    AlertDescription,
+    Button
 } from '@chakra-ui/react';
 
 import styles from './Paynow.module.css';
@@ -26,64 +26,64 @@ function Paynow() {
 
     const [data, setdata] = useState(initialdata);
     const [taxAmount, setTaxAmount] = useState('');
-    const dispatch=useDispatch()
-    const navigate =useNavigate()
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
     // const [showAlert, setShowAlert] = useState(false);
     // const [showSuccessAlert, setShowSuccessAlert] = useState(false);
-    const onToken = (token)=>{
-      console.log(token);
-      handlesubmit()
-     }
+    const onToken = (token) => {
+        console.log(token);
+        handlesubmit()
+    }
     function handlechange(e) {
         const { name, value } = e.target;
-        setdata((prev)=>{
-            return {...prev,[name]:value}
+        setdata((prev) => {
+            return { ...prev, [name]: value }
         })
 
     }
-        // Function to handle the Tax Amount input change
-        const handleTaxAmountChange = (e) => {
-          setTaxAmount(e.target.value);
-      };
-  
+    // Function to handle the Tax Amount input change
+    const handleTaxAmountChange = (e) => {
+        setTaxAmount(e.target.value);
+    };
+
     function handlesubmit() {
         console.log("clicked");
-        let flag=true
-        for(let key in data){
-           if(!data[key]){
-            flag=false
-           }
+        let flag = true
+        for (let key in data) {
+            if (!data[key]) {
+                flag = false
+            }
         }
-        if(flag){
-          console.log("succes clicked");
+        if (flag) {
+            console.log("succes clicked");
             dispatch(handlepostdetails(data))
             // alert('Your Payment is Successfully done')
             // setShowSuccessAlert(true);
             setTimeout(() => {
-              navigate('/');
+                navigate('/');
             }, 1000);
             // navigate('/')
         }
-        else{
+        else {
             // alert('Need to Fill all the credentials')
             console.log("error clicked");
             // setShowAlert(true);
         }
-       
-        
-        
+
+
+
     }
-    
+
     return (
 
-      
+
         <div style={{ marginTop: '50px', paddingTop: '100px' }}>
-               
+
             <div width='100%' style={{ color: 'black' }} >
-           
+
                 <div id={styles.flexdiv}>
                     <div className={styles.formdiv}>
-             
+
                         <h1 className={styles.head}>User details</h1>
                         <div style={{ textAlign: 'left', padding: '30px 60px' }}>
                             <p >First Name*</p>
@@ -96,14 +96,25 @@ function Paynow() {
                             <input type="text" placeholder="Enter your Address details" value={data.address} onChange={(e) => handlechange(e)} className={styles.inputbox} name="address" />
                             <p style={{ marginTop: '15px' }}>Mobile number*</p>
                             <input type="number" placeholder="Enter your mobile number" value={data.number} onChange={(e) => handlechange(e)} style={{ backgroundColor: '#DAEFF4', width: '100%', padding: '10px 10px', borderRadius: '7px', color: 'black' }} name="number" />
-                          
                             <p style={{ marginTop: '10px' }}>Tax Amount</p>
-                                <input type="text" className={styles.inputbox} value={taxAmount} onChange={handleTaxAmountChange}/>
+                            <input type="number" className={styles.inputbox} value={taxAmount} onChange={handleTaxAmountChange} />
+
+                          {
+                                <StripeCheckout
+                                style={{ marginTop:"20px"}}
+                                    token={onToken}
+                                    name="TaxTim Pay Returns"
+                                    currency="Inr"
+                                    amount={taxAmount * 100}
+                                    stripeKey="pk_test_51OJMjCSAjvY3hLJ3guc0YyhIdWlr35AS7rddkLF5Q8CK2e3KS4ULCCMAlaat0sm0nD0ZcMCnK4UJagRjQpiwF9G700DkriFi2r"
+                                />}
+                            
+
                         </div>
-                        
+
                     </div>
-                    <div className={styles.formdiv}>
-                        {/* <h1 className={styles.head}>Bank details</h1>
+                    {/* <div className={styles.formdiv}> */}
+                    {/* <h1 className={styles.head}>Bank details</h1>
                         <div style={{ textAlign: 'left', padding: '30px 60px' }}>
                             <p style={{ marginTop: '10px' }}>Name on Card*</p>
                             <input type="text" placeholder="Enter your first name" className={styles.inputbox} />
@@ -159,7 +170,7 @@ function Paynow() {
                                 <input type="text" className={styles.inputbox} value={taxAmount} onChange={handleTaxAmountChange}/>
                             </div>
                         </div> */}
-                        {/* <div id={styles.divpay}><button id={styles.paybutton} onClick={handlesubmit} >Click to pay Tax</button></div> */}
+                    {/* <div id={styles.divpay}><button id={styles.paybutton} onClick={handlesubmit} >Click to pay Tax</button></div> */}
                     {/* <Button onClick={handlesubmit} >Pay Now</Button> */}
                     {/* {showSuccessAlert && (
             <Alert status='success' position="absolute" top="10px" right="10px" zIndex={100}>
@@ -173,18 +184,12 @@ function Paynow() {
       <AlertIcon />
       Need to fill all Credentials
     </Alert>)} */}
-   
-    <StripeCheckout
-        token={onToken}
-        name="TaxTim Pay Returns"
-        currency="Inr"
-        amount={taxAmount*100}
-        stripeKey="pk_test_51OJMjCSAjvY3hLJ3guc0YyhIdWlr35AS7rddkLF5Q8CK2e3KS4ULCCMAlaat0sm0nD0ZcMCnK4UJagRjQpiwF9G700DkriFi2r"
-      />
-                    </div>
+
+
+                    {/* </div> */}
                 </div>
             </div>
-         
+
         </div>)
 }
 export default Paynow;
