@@ -1,0 +1,40 @@
+*{
+    letter-spacing: .5px;
+}
+.Main{
+    width: 85%;
+    margin: auto;
+    font-family: sans-serif;
+    text-align: start;
+}
+.faqtop>h2{
+    margin-left: 20px;
+    text-align: start;
+}
+.faqtop>h2+hr{
+    margin-top: 0;
+}
+.faqtop>div>h3,p,h4{
+    margin: 15px 0;
+}
+.faqtop>div>h3+h3{
+    font-weight: 500;
+}
+table{
+    border-collapse: collapse;
+    background-color: #DAEFF4;
+}
+table, td{
+    border: 1px solid;
+    padding: 4px;
+}
+th{
+    padding: 5px;
+}
+.bottom{
+    line-height: 20px;
+}
+.bottom>h3{
+    margin-top: 60px;
+    color: rgb(70, 65, 65);
+}
