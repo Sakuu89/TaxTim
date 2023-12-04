@@ -48,9 +48,8 @@ For more information on how to use Chakra UI in this project, refer to the docum
  <b> Firebase:</b>
 
 - **Firebase**: A platform developed by Google for building web and mobile applications.
-- 
+-  
 - ### Authentication
-
 [Firebase Authentication](https://firebase.google.com/products/auth) handles user authentication and authorization. It provides secure authentication methods like email/password, OAuth, and more.
 
 ## How Firebase is Utilized
