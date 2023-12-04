@@ -71,8 +71,6 @@ We have used many libraries of react like styled components for styling, icons, 
 Razorpay Auth is integrated into this project to handle secure user authentication during payment transactions, ensuring a seamless and secure payment experience for users.
 
 **Installation:** Include steps or dependencies required to integrate Razorpay Auth into the project.
-   
-   ```bash
    # Example installation command or steps
    npm install razorpay-auth
 
