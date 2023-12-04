@@ -9,7 +9,7 @@ It was during the final week which is depicted as the construct week. We have do
 
 # <span style="color:red"> About Website: </span>
 
- [TaxTim](https://super-peony-e095c9.netlify.app/),TaxTim is an online tax filing platform designed to simplify the process of completing and filing tax returns for individuals and businesses. It utilizes a user-friendly interface and a question-and-answer format to guide users through their tax obligations.TaxTim's goal is to streamline and simplify the often complex and daunting task of tax filing, making it more accessible and understandable for individuals and businesses, while aiming for accuracy and compliance with tax regulations. For the most current and detailed information about TaxTim's offerings and services, it's advisable to visit their website directly or contact their support team.
+ [TaxTim](https://super-peony-e095c9.netlify.app/),TaxTim is an online tax filing platform designed to simplify the process of completing and filing tax returns for individuals and businesses. It utilizes a user-friendly interface and a question-and-answer format to guide users through their tax obligations . The website is optimised to work across a wide range of devices such as phones , tablets , Laptops ,etc. , TaxTim's goal is to streamline and simplify the often complex and daunting task of tax filing, making it more accessible and understandable for individuals and businesses, while aiming for accuracy and compliance with tax regulations. For the most current and detailed information about TaxTim's offerings and services, it's advisable to visit their website directly or contact their support team.
  
 
 # <span style="color:red"> Tech Stack Used: </span>
