@@ -1,14 +1,11 @@
-
 import { useState } from "react"
 import { useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom";
 import StripeCheckout from 'react-stripe-checkout';
-
+import useRazorpay from "react-razorpay";
+import { useCallback } from "react";
+import { useEffect, useRef } from "react";
 import {
-    Alert,
-    AlertIcon,
-    AlertTitle,
-    AlertDescription,
     Button
 } from '@chakra-ui/react';
 
@@ -23,9 +20,42 @@ const initialdata = {
     number: ''
 }
 function Paynow() {
-
-    const [data, setdata] = useState(initialdata);
+    
     const [taxAmount, setTaxAmount] = useState('');
+    const [Razorpay, isLoaded] = useRazorpay();
+  const handlePayment = useCallback(() => {
+    const options = {
+      key: "rzp_test_yswl3N40ETtM35", // Replace with your actual API Key
+      amount: taxAmount*100,
+      currency: "INR",
+      name: "Tax Tim",
+      description: "Tax Payment",
+      image:"https://media.taxtim.com/images/taxtim-logo.svg" ,
+      // order_id: 1, // Pass the order ID obtained from createOrder
+      handler: (res) => {
+        // setShowThankYou(true);
+        setTimeout(() => {
+        //   setShowThankYou(false);
+          navigate("/");//homepage redirect
+        }, 100);
+      },
+      prefill: {
+        name: "Sakshi Singh",
+        email: "youremail@example.com",
+        contact: "9999999999",
+      },
+      notes: {
+        address: "Razorpay Corporate Office",
+      },
+      theme: {
+        color: "#3399cc",
+      },
+    };
+
+    const rzpay = new Razorpay(options);
+    rzpay.open();
+  }, [Razorpay,taxAmount]);
+    const [data, setdata] = useState(initialdata);
     const dispatch = useDispatch()
     const navigate = useNavigate()
     // const [showAlert, setShowAlert] = useState(false);
@@ -43,7 +73,8 @@ function Paynow() {
     }
     // Function to handle the Tax Amount input change
     const handleTaxAmountChange = (e) => {
-        setTaxAmount(e.target.value);
+        const amount=e.target.value
+        setTaxAmount(amount);
     };
 
     function handlesubmit() {
@@ -59,9 +90,9 @@ function Paynow() {
             dispatch(handlepostdetails(data))
             // alert('Your Payment is Successfully done')
             // setShowSuccessAlert(true);
-            setTimeout(() => {
-                navigate('/');
-            }, 1000);
+            // setTimeout(() => {
+            //     navigate('/');
+            // }, 1000);
             // navigate('/')
         }
         else {
@@ -69,9 +100,6 @@ function Paynow() {
             console.log("error clicked");
             // setShowAlert(true);
         }
-
-
-
     }
 
     return (
@@ -99,7 +127,9 @@ function Paynow() {
                             <p style={{ marginTop: '10px' }}>Tax Amount</p>
                             <input type="number" className={styles.inputbox} value={taxAmount} onChange={handleTaxAmountChange} />
 
-                          {
+                            <Button style={{ border:'1px solid black', marginTop:'20px'}} onClick={handlePayment} className="pmt-btn">Pay Now</Button>
+                            {/* <button style={{ border:'1px solid black', marginTop:'20px'}} onClick={handlePayment} className="pmt-btn"> Pay Now</button> */}
+                          {/* {
                                 <StripeCheckout
                                 style={{ marginTop:"20px"}}
                                     token={onToken}
@@ -107,9 +137,9 @@ function Paynow() {
                                     currency="Inr"
                                     amount={taxAmount * 100}
                                     stripeKey="pk_test_51OJMjCSAjvY3hLJ3guc0YyhIdWlr35AS7rddkLF5Q8CK2e3KS4ULCCMAlaat0sm0nD0ZcMCnK4UJagRjQpiwF9G700DkriFi2r"
-                                />}
-                            
-
+                                />} */}
+                                
+                                
                         </div>
 
                     </div>
@@ -193,4 +223,3 @@ function Paynow() {
         </div>)
 }
 export default Paynow;
-
