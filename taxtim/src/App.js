@@ -18,7 +18,7 @@ function App() {
     }, [])
   return (
     <div className="App" style={{width:'100%'}}>
-      {<Navbar logout={true} userName={userName} />}
+      <Navbar logout={true} userName={userName} />
      <AllRoutes />
      <Footer/>
     </div>
