@@ -1,0 +1,74 @@
+.aidkid{
+    width: 100%;
+    padding-top: 90px;
+  }
+  .aidkid h1{
+    font-size: 26px;
+    font-weight: 600;
+    color: #4d4d4d;
+    background-color: #ffffff;
+    text-align: left;
+    padding-left: 65px;
+  }
+  .aidkid h2{
+    font-size: 24px;
+    font-weight: 600;
+    color: #4d4d4d;
+    background-color: #ffffff;
+    text-align: left;
+    padding-left: 65px;
+  }
+  .left_heading{
+        width: 100%;
+        margin-left: 65px;
+        margin-top: 13px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #555555;
+    }
+    .left_heading p{
+        font-size: 20px;
+        font-weight: 600;
+        text-align: left;
+        padding-left: 20px;
+        color: white;
+    }
+    .left_mid{
+        width: 100%;
+        margin-left: 65px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        background-color: #ececec;
+        text-align: left;
+    }
+    .left_mid label{
+        padding: 20px;
+        
+    }
+    .input_gap{
+        margin-top: 20px;
+        
+    }
+    button{
+        width: 160px;
+        height: 32px;
+        font-weight: 400;
+        color: white;
+        background-color: #eb4f36;
+        border-radius: 2px;
+    }
+    .results{
+        margin-top: 50px;
+        text-align: left;
+        padding-left: 65px;
+        color: #4d4d4d;
+        background-color: #ffffff;
+    }
+    select,input{
+        margin-left: 20px;
+        padding-left: 5px;
+    }
+
+
+
+    

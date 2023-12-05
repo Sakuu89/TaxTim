@@ -1,0 +1,230 @@
+.loginContainer1 {
+    background-color: #dcf1f6;
+  }
+  
+  .loginContainer {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+  .login {
+    width: 40%;
+  }
+  .errormsg{
+    text-align: left;
+    font-weight: bold;
+    font-size: 0.875rem;
+    color: black;
+  }
+  .formbtn3:disabled{
+    background-color: gray!important;
+  }
+  .formbtn2:disabled{
+    display: none;
+  }
+  .texth1 {
+    text-align: left;
+    color: #4d4d4d;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 1.2;
+    letter-spacing: -0.1rem;
+    font-family: "Montserrat", Arial, sans-serif;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+  }
+  .text {
+    color: green;
+    font-weight: bold;
+  }
+  .texth2 {
+    text-align: left;
+    color: #4d4d4d;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.1rem;
+    font-family: "Montserrat", Arial, sans-serif;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+  }
+  
+  .sign {
+    width: 60%;
+    margin-left: 10%;
+  }
+  .loginform {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .inputform {
+    width: 200px;
+    font-size: 1.2rem;
+    margin: 10px 0px 10px 0rem;
+  }
+  .lablefrom {
+    text-align: left;
+    color: #4d4d4d;
+    font-weight: bold;
+  }
+  .formbtn {
+    border-radius: 2px;
+    width: 250px;
+    height: 30px;
+    border: 0;
+    margin: 10px 0px 10px 0;
+    background-color: #444444;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .formbtn3 {
+    border-radius: 2px;
+    width: 250px;
+    height: 30px;
+    border: 0;
+    margin: 10px 0px 10px 0;
+    background-color: #444444;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .formbtn2 {
+    border-radius: 2px;
+    width: 250px;
+    height: 30px;
+    border: 0;
+    margin: 10px 0px 10px 0;
+    background-color: #444444;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .link :nth-child(1) {
+    color: green;
+  }
+  .link {
+    margin: 5px 0px 5px 0;
+  }
+  .formbtn:hover {
+    background-color: 
+    #eb4f36;
+    color: white;
+    transition: 0.4s;
+  }
+  .formbtn3:hover {
+    background-color: 
+    #eb4f36;
+    color: white;
+    transition: 0.4s;
+  }
+  .formbtn2:hover {
+    background-color: 
+    #eb4f36;
+    color: white;
+    transition: 0.4s;
+  }
+  .text {
+    color: #4d4d4d;
+  }
+  .para {
+    font-size: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 2rem;
+  }
+  .para p {
+    margin-top: 30px;
+  }
+  .image1 {
+    width: 100%;
+    margin-top: 300px;
+  }
+  .image2 {
+    height: 500px;
+    margin-left: 200px;
+  }
+  .link1 {
+    text-align: left;
+    color: black;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  @media screen and (max-width: 1200px) and (min-width: 700px) {
+    .loginContainer {
+      display: flex;
+      flex-direction: column;
+    }
+    .login {
+      width: 100%;
+    }
+    .sign {
+      width: 100%;
+      margin-left: 0;
+    }
+    .image1 {
+      width: 30%;
+      margin-top: 0;
+    }
+    .image2 {
+      margin-top: -300px;
+      margin-left: 300px;
+      height: 300px;
+    }
+  
+    .para {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .para {
+      font-size: 1.2rem;
+    }
+    .loginContainer {
+      display: flex;
+      flex-direction: column;
+    }
+    .login {
+      width: 100%;
+    }
+    .sign {
+      width: 100%;
+      margin-left: 0;
+    }
+    .texth1 {
+      font-size: 2.5rem;
+    }
+    .texth2 {
+      font-size: 2rem;
+    }
+    .formbtn {
+      font-size: 0.9rem;
+    }
+    .image1 {
+      width: 30%;
+      margin-top: 0;
+    }
+    .image2 {
+      margin-top: -400px;
+      margin-left: 400px;
+      height: 300px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .image2 {
+      width: 30%;
+      margin-left: 17rem;
+      margin-top: -39rem;
+    }
+    .formbtn2{
+      margin-right: -12.2rem;
+  
+    }
+  }

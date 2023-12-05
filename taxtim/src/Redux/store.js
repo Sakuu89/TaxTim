@@ -1,0 +1,8 @@
+import { applyMiddleware, combineReducers, legacy_createStore } from "redux";
+import thunk from "redux-thunk";
+import { payReducer } from "./PayReducer/payReducer";
+const rootReducer =combineReducers({
+    payReducer
+})
+
+export const store =legacy_createStore(rootReducer,applyMiddleware(thunk)) 

@@ -1,0 +1,230 @@
+
+
+.top-nav {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: #444444;
+    color: rgb(0, 0, 0);
+    height: 40px;
+    font-size: 0.85em;
+    align-items: center;
+    position: sticky;
+    top:0;
+    z-index: 1;
+  }
+  
+  .reg-nav {
+    color: white;
+    font-weight: 700;
+    width: 50%;
+    justify-content: space-around;
+    margin-right: 250px;
+  }
+  
+  #link-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1px;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    width: 40%;
+    font-weight: 600;
+  }
+  
+  .link {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  .loginname{
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .top-nav-II {
+    display: flex;
+    justify-content: space-around;
+    background-color: #85c4cc;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  .top-nav-III {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    height: 100%;
+    margin-left: 200px;
+  }
+  
+  .anch {
+    color: rgb(2, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Droid Sans", Arial, sans-serif;
+    margin-right: 0.2em;
+    padding: 5px;
+  }
+  
+  .logo-img {
+    width: 221px;
+    vertical-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    margin-right: 300px;
+  }
+  
+  .getstart {
+
+    width: 100px;
+    height: 40px;
+    margin-top: -20rem;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    border: 2px solid #eb4f36;
+    background-color: #eb4f36;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .getstart:hover {
+    background-color: #ec3102; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+  }
+  #mobile {
+    display: none;
+    margin-right: 20px;
+  }
+ #mobile i{
+   color: white;
+ }
+  
+  /* Media query for medium-sized screens */
+  @media (max-width: 820px) {
+    .top-nav {
+      justify-content: space-between; /* Adjust the spacing of elements */
+    }
+    
+    .reg-nav {
+      width: 40%; /* Reduce the width */
+      margin-right: 0; /* Remove the right margin */
+    }
+    
+    #link-div {
+      width: 60%; /* Increase the width */
+    }
+    
+    .logo-img {
+      margin-right: 0; /* Remove the right margin */
+      width:180px
+    }
+    
+    .top-nav-III {
+      margin-left: 0; /* Remove the left margin */
+    }
+  }
+  
+  /* Media query for small screens */
+  @media (max-width: 375px) {
+    .reg-nav {
+      display: none; /* Hide the registration section on small screens */
+    }
+    
+    #link-div {
+      justify-content: space-evenly; /* Center align the links */
+      width: 100%; /* Occupy full width */
+      margin-top: 15px; /* Add some margin at the top */
+    }
+    
+    .link {
+      font-size: 0.9em; /* Reduce the font size */
+    }
+    
+    .top-nav-II {
+      flex-direction: column; /* Stack the elements vertically */
+      padding: 10px; /* Adjust the padding */
+    }
+    
+    .top-nav-III {
+      gap: 10px; /* Reduce the gap between elements */
+      margin-left: 0; /* Remove the left margin */
+    }
+    
+    .anch {
+      font-size: 16px; /* Reduce the font size */
+      padding: 3px; /* Adjust the padding */
+    }
+    
+    .logo-img {
+      margin-bottom: 10px; /* Reduce the margin at the bottom */
+      width:100px
+    }
+    
+    .getstart {
+      display: none; /* Hide the "GET STARTED" button on small screens */
+    }
+  }
+
+  @media screen and (max-width:769px){
+    .reg-nav {
+        width: 80%;
+        font-size: 13px;
+        font-weight: 500; /* Reduce the width */
+        margin-left: 3px; /* Remove the right margin */
+      }
+      .logo-img img { /* Remove the right margin */
+        width: 100px;
+        height: 40px;
+        margin-left: -15px;
+      }
+      .anch{
+        font-size: 13px;
+        font-weight: 300;
+        width: 110%;
+        height: 30%;
+        cursor: pointer;
+      }
+      .getstart{
+        margin-top: 0;
+        cursor: pointer;
+      }
+
+    #link-div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 40px;
+        right: -300px;
+        width: 280px;
+        height: 100vh;
+        background: #444444;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 0px 0  0 15px;
+        transition: 0.3s ease-in-out;
+      }
+      #link-div.active { 
+        right: 0px;
+      }
+      .loginname{
+        font-size: 8px;
+        margin-right: -4rem;
+      }
+       #some {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+      #mobile {
+        display: block;
+      }
+      #mobile i {
+        font-size: 24px;
+        cursor: pointer;
+      }
+  }
