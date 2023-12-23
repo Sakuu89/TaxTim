@@ -165,7 +165,7 @@ We are very thankful for the support of my teammates and instructor for the comp
 - ## Sujal Sahu
 [GitHub](https://github.com/sujalsahu620)
 
-- ## Suraj Yadav
+- ## Suraj Kumar Yadav
 [GitHub](https://github.com/SurajYadav007)
 
 - ## Madhu Sudan
